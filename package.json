@@ -1,0 +1,19 @@
+{
+    "name": "express-mocha-testing-example",
+    "description": "node.js, express, mocha, nyc:instabule",
+    "version": "0.0.1",
+    "engines": {
+        "node": ">= 0.10.x"
+    },
+    "private": false,
+    "dependencies": {
+        "chai": "^4.3.0",
+        "chai-http": "^4.3.0",
+        "express": "4.x",
+        "mocha": "^8.2.1",
+        "nyc": "^15.1.0"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha index.spec.js"
+    }
+}
