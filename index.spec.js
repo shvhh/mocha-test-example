@@ -30,9 +30,8 @@ describe('/GET index', () => {
 });
 
 describe('/GET user', () => {
-    beforeEach((done) => { //Before each test we empty the database
-        console.log("before Each")
-        done();
+    beforeEach("beforeEach",() => { //Before each test we empty the database
+        return Promise.resolve("beforeEach");
     });
     it('it should GET user1', (done) => {
         chai.request(app)
