@@ -9,16 +9,15 @@ let should = chai.should();
 
 
 chai.use(chaiHttp);
-//Our parent block
-describe('Books', () => {
-    beforeEach((done) => { //Before each test we empty the database
-        done();
-    });
-});
+
 /*
   * Test the /GET route
   */
 describe('/GET index', () => {
+    beforeEach((done) => { //Before each test we empty the database
+        console.log("before Each")
+        done();
+    });
     it('it should GET index route', (done) => {
         chai.request(app)
             .get('/')
@@ -31,6 +30,10 @@ describe('/GET index', () => {
 });
 
 describe('/GET user', () => {
+    beforeEach((done) => { //Before each test we empty the database
+        console.log("before Each")
+        done();
+    });
     it('it should GET user1', (done) => {
         chai.request(app)
             .get('/user/user1')
